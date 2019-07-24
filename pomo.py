@@ -13,6 +13,7 @@ nflashes = abs(duration/minsleep - duration/maxsleep) // 2
 for minute in range(worktime):
     print(f"{worktime - minute} minutes left")
     sleep(60)
+print("\nTIME OVER!")
 for i in range(int(nflashes)):
     run(split("xrefresh -solid black"))
     sleep(minsleep + (maxsleep - minsleep) * i / nflashes)
