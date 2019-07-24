@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from subprocess import run
-from shlex import split
 from time import sleep
 
 worktime = 20 # Minutes
@@ -15,5 +14,5 @@ for minute in range(worktime):
     sleep(60)
 print("\nTIME OVER!")
 for i in range(int(nflashes)):
-    run(split("xrefresh -solid black"))
+    run(["xrefresh"])
     sleep(minsleep + (maxsleep - minsleep) * i / nflashes)
